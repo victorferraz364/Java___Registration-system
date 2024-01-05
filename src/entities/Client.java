@@ -7,23 +7,23 @@ public class Client {
 	private String name;
 	private Long cpf;
 	private Long phone;
-	private Integer numero;
 	private String end;
 	private Integer number;
 	private String city;
 	private String state;
 	
-	public Client(String name, Long cpf, Long phone, Integer numero, String end, Integer number, String city, String state) {
+	public Client() {}
+	
+	public Client(String name, String cpf, String phone, String end, String number, String city, String state) {
 		
 		this.name = name;
-		this.cpf = cpf;
-		this.phone = phone;
-		this.numero = numero;
+		this.cpf = Long.valueOf(cpf.trim());
+		this.phone = Long.valueOf(phone.trim());
 		this.end = end;
-		this.number = number;
+		this.number = Integer.valueOf(number.trim());
 		this.city = city;
-		this.state = state;
-	}
+		this.state = state; 
+		}
 
 	public String getName() { return name; }
 
@@ -36,10 +36,6 @@ public class Client {
 	public Long getPhone() { return phone; }
 
 	public void setPhone(Long phone) { this.phone = phone; }
-
-	public Integer getNumero() { return numero; }
-
-	public void setNumero(Integer numero) { this.numero = numero; }
 
 	public String getEnd() { return end; }
 
